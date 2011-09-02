@@ -1,0 +1,61 @@
+#!/usr/bin/php
+<?php
+define('BASEPATH','../..'); // mockup that this app was executed from ci ;)
+define('APPPATH','..');
+chdir(dirname(__FILE__));
+
+
+// system/application/plugins/doctrine_pi.php
+// load Doctrine library
+require_once APPPATH.'/helpers/doctrine/lib/Doctrine.php';
+// load database configuration from CodeIgniter
+require_once APPPATH.'/config/database.php';
+// this will allow Doctrine to load Model classes automatically
+spl_autoload_register(array('Doctrine', 'autoload'));
+spl_autoload_register(array('Doctrine','modelsAutoload'));
+// we load our database connections into Doctrine_Manager
+// this loop allows us to use multiple connections later on
+foreach ($db as $connection_name => $db_values) {
+    // first we must convert to dsn format
+    $dsn = $db[$connection_name]['dbdriver'] .
+        '://' . $db[$connection_name]['username'] .
+        ':' . $db[$connection_name]['password'].
+        '@' . $db[$connection_name]['hostname'] .
+        '/' . $db[$connection_name]['database'];
+    Doctrine_Manager::connection($dsn,$connection_name);
+}
+Doctrine_Manager::getInstance()->setAttribute(
+        Doctrine::ATTR_MODEL_LOADING, 
+        Doctrine::MODEL_LOADING_CONSERVATIVE
+    );
+Doctrine_Manager::getInstance()->setAttribute(Doctrine_Core::ATTR_AUTOLOAD_TABLE_CLASSES, true);
+// CodeIgniter's Model class needs to be loaded
+require_once BASEPATH.'/system/core/Model.php';
+// telling Doctrine where our models are located
+Doctrine::loadModels(APPPATH.'/doctrine_ws/models');
+// (OPTIONAL) CONFIGURATION BELOW
+// this will allow us to use "mutators"
+Doctrine_Manager::getInstance()->setAttribute(
+    Doctrine::ATTR_AUTO_ACCESSOR_OVERRIDE, true);
+// this sets all table columns to notnull and unsigned (for ints) by default
+Doctrine_Manager::getInstance()->setAttribute(
+    Doctrine::ATTR_DEFAULT_COLUMN_OPTIONS,
+    array('notnull' => true, 'unsigned' => true));
+// set the default primary key to be named 'id', integer, 4 bytes
+Doctrine_Manager::getInstance()->setAttribute(
+    Doctrine::ATTR_DEFAULT_IDENTIFIER_OPTIONS,
+    array('name' => 'id', 'type' => 'integer', 'length' => 4));
+
+ 
+
+
+// Configure Doctrine Cli
+// Normally these are arguments to the cli tasks but if they are set here the arguments will be auto-filled
+$config = array('data_fixtures_path'  =>  dirname(__FILE__) . DIRECTORY_SEPARATOR . '/fixtures',
+                'models_path'         =>  dirname(__FILE__) . DIRECTORY_SEPARATOR . '/models',
+                'migrations_path'     =>  dirname(__FILE__) . DIRECTORY_SEPARATOR . '/migrations',
+                'sql_path'            =>  dirname(__FILE__) . DIRECTORY_SEPARATOR . '/sql',
+                'yaml_schema_path'    =>  dirname(__FILE__) . DIRECTORY_SEPARATOR . '/schema');
+
+$cli = new Doctrine_Cli($config);
+$cli->run($_SERVER['argv']);

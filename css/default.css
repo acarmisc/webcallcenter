@@ -1,0 +1,436 @@
+body {
+	background-color: #dfe3e6;
+	font: 11px "Lucida Grande", Lucida, Verdana, sans-serif;
+	color: #505353;
+	margin: 0px;
+}
+
+a, a:visited {
+	color: #27afd6;
+}
+
+.falseButton {
+	color: #27afd6;
+	cursor: pointer;
+}
+
+#main_body {
+	position: relative;
+	margin-left: 160px;
+	width: 850px;
+	margin-top: 10px;
+}
+
+
+#login_box {
+	float: left;
+	width: 230px;
+	background-color: #e9eef0;
+	padding: 5px;
+	border: 1px solid #c6d9de;
+	margin-top: 20px;
+	margin-left: 20px;
+	-moz-box-shadow: 0px 0px 10px #ccc;
+	
+}
+
+#login_box input[type=text], #login_box input[type=password] {
+	border: 1px solid #d5d5d5;
+	padding: 4px;
+	font: 13px "Lucida Grande", Verdana, Lucida, sans-serif;
+}
+
+#login_box input[type=text]:focus, #login_box input[type=password]:focus {
+	background-color: #e9f8fb;
+	border: 1px solid #7eb9f8;
+}
+
+#welcome_box {
+	float: right;
+	width: 650px;
+	background: url(img/chem.png) no-repeat right bottom;
+	min-height: 400px;
+	margin-top: 10px;
+}
+
+#welcome_box h1 {
+	font-size: 50px;
+	color: #4e4c4d;
+	text-shadow: 1px 1px 5px #777777;
+	font-variant: small-caps;
+}
+
+#welcome_box p {
+	width: 500px;
+	color: #6e87a3;
+	font: 16px/1.9em Verdana, "Lucida Grande", Lucida, sans-serif;
+	margin-bottom: 30px;
+}
+
+#header {
+	background-color: #383939;
+	padding: 8px;
+	min-height: 24px;
+	border-bottom: 1px groove #000;
+}
+
+#toolbar {
+	min-height: 40px;
+	min-width: 150px;
+	padding: 5px;
+	color: #7d7d7d;
+	position: absolute;
+	top: 50px;
+	left: 5px;
+	background-color: #fffeff;
+	border: 1px solid #cbd9ed;	
+}
+
+#toolbar h2 {
+	margin: 0px;
+	padding: 2px;
+	font-size: 11px;
+	background-color: #808080;
+	color: #fffeff;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	margin-bottom: 5px;
+}
+
+#toolbar a, #toolbar a:hover {
+	text-decoration: none;
+}
+
+#toolbar li {
+	padding: 2px;
+	background-color: #e6effa;
+	margin-bottom: 3px;
+	list-style-type: none;
+}
+
+#toolbar li:hover {
+	background-color: #fcdecb;
+}
+
+#logo {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#user_logged {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background-color: #4c4d4d;
+	border-left: 1px solid #5b5d5d;
+	min-height: 20px;
+	min-width: 200px;
+	color: #fffeff;
+	font-family: Verdana, "Lucida Grande", Lucida, sans-serif;
+	padding: 1px 10px 10px;
+}
+
+#footer {
+	background-color: #383939;
+	padding: 8px;
+	min-height: 30px;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	text-align: center;
+	color: #a6cce7;
+	display: none;
+}
+
+#core_space {
+	width: 800px;
+	min-height: 200px;
+	background-color: rgba(255,254,255,0.74);
+	border: 1px solid #cbd9ed;
+	margin: auto;
+	margin-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+
+#core_space h1 {
+	margin-bottom: 2px;
+	padding-bottom: 5px;
+	padding: 3px;
+	color: #f1f8f2;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	border-bottom: 1px solid #d7e4f3;
+	background-color: #fd9900;
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-topright: 6px;	
+	-webkit-border-radius-topleft: 6px;
+	-webkit-border-radius-topright: 6px;		
+	clear: both;	
+}
+
+#core_space p {
+	padding: 0px;
+	margin: 3px;
+}
+
+form[name=formFarmacie] {
+}
+
+.formRicercaFarmaciaClass {
+	background-color: #C9DCF5 ;
+	-moz-border-radius-bottomleft: 6px;
+	-moz-border-radius-bottomright: 6px;	
+	-webkit-border-radius-bottomleft: 6px;
+	-webkit-border-radius-bottomright: 6px;	
+	padding: 3px;
+}
+
+
+formRicercaFarmaciaClass p {
+
+}
+
+.formRicercaFarmaciaClass label {
+	color: #6e6e6e;
+	min-width: 70px;
+	display: inline-table;
+	padding-left: 2px;
+	text-align: right;
+}
+
+.formRicercaFarmaciaClass input[type=text] {
+	background-color: #f1faf5;
+	padding: 3px;
+	border: 1px solid #e7e7e7;
+}
+
+.formRicercaFarmaciaClass input[type=text]:disabled {
+	background: #f1faf5 url(img/lock.png) no-repeat right center;
+}
+
+.formRicercaFarmaciaClass input[type=text]:focus {
+	background-color: #d1f9dd;
+	border: 1px solid #d6d6d6;
+}
+
+
+/*.tableRisRicClass {
+	border: 1px solid #d6d6d6;
+	width: 100%;
+	background-color: #C9DCF5 ;
+	-moz-border-radius-bottomleft: 6px;
+	-moz-border-radius-bottomright: 6px;	
+	-webkit-border-radius-bottomleft: 6px;
+	-webkit-border-radius-bottomright: 6px;	
+	padding: 3px;
+}
+*/
+
+.tableRisRicClass {
+ width: 100%;	
+ background-color: #e0e7f8;
+	-moz-border-radius-bottomleft: 6px;
+	-moz-border-radius-bottomright: 6px;	
+	-webkit-border-radius-bottomleft: 6px;
+	-webkit-border-radius-bottomright: 6px;	
+	padding: 3px;
+	border-top: 1px solid #afbbd3;
+}
+
+.tableRisRicClass th {
+	border-bottom: 1px solid #afc2d2;
+	background-color: #d9e1eb;
+	padding: 4px;
+}
+
+.tableRisRicClass td {
+	border-bottom: 1px solid #dedff4;
+	background-color: #f9fcff;
+	padding: 2px;
+}
+
+.tableRisRic_rigaDispariClass td {
+	background-color: #edf3f6;
+}
+
+/*
+.tableRisRic_rigaHeadClass td {
+	border: 1px solid #d6d6d6;
+	padding: 2px;
+}
+
+.tableRisRic_rigaDispariClass td {
+	border: 1px solid #d6d6d6;
+	background-color: white;
+	padding: 2px;
+}
+
+.tableRisRic_rigaPariClass td {
+	border: 1px solid #d6d6d6;
+	background-color: white;
+	padding: 2px;
+}*/
+.divFormRisClass {
+
+}
+
+.formRisClass {
+	
+}
+
+.formVisualizzaFarmaciaClass input {
+	background-color: white;
+	color: black;
+}
+
+.calendar {
+	padding: 5px;
+	background-color: #f4f6fc;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border: 1px solid #e6f4fc;
+}
+
+.calendar-table th {
+	color: #5f6577;
+	background-color: #ecf1fa;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;	
+	height: 20px;
+}
+
+.calendar th.day_header {
+	background-color: #fffeff;
+}
+
+.calendar td {
+	background-color: #edf2f7;
+	text-align: center;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;	
+	width: 50px;
+	height: 30px;	
+}
+
+.calendar td.p {
+	background-color: #edf2f7;
+	text-align: center;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;	
+	width: 50px;
+	height: 30px;	
+}
+
+.calendar td div.today{
+	width: 100%;
+	height: 100%;	
+}
+
+.calendar td div.p25 {
+	background-color: #fadbd4;
+	text-align: center;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;	
+	width: 100%;
+	height: 100%;	
+}
+
+.calendar td div.p50 {
+	background-color: #ffafa0;
+	text-align: center;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;	
+	width: 100%;
+	height: 100%;	
+}
+
+.calendar td div.p75 {
+	background-color: #ff7e68;
+	text-align: center;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;	
+	width: 100%;
+	height: 100%;	
+}
+
+.calendar td div.p100 {
+	background-color: #ff4a00;
+	text-align: center;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;	
+	width: 100%;
+	height: 100%;	
+	color: #fffeff;
+}
+
+.calendar td:hover {
+	background-color: #caffd1;
+}
+
+.calendar td a {
+	text-decoration: none;
+	color: #304358;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.calendar td:empty {
+	background-color: transparent;
+}
+
+.day_listing::before {
+	background-color: #6a6a6a;
+}
+
+.calendar .week_day {
+	font-weight: bold;
+	background-color: #dde7ef;
+}
+
+#servizi {
+	margin: 2px;
+	padding: 2px;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	background-color: #f8f8f8;
+}
+
+.hide-me {
+	display: none;
+}
+
+.costrainer {
+	max-height: 400px;
+	overflow-y: scroll;
+}
+
+#costrainer-navigator {
+	position: absolute;
+	margin-left: -15px;
+}
+
+.download-block {
+	margin-left: 50px;
+}
+
+.download-block li {
+	list-style-type: none;
+	border: 1px solid #eee;
+	padding: 8px;
+	margin: 3px;
+	font-size: 12px;
+	width: 200px;
+}
+
+.download-block li:hover {
+	list-style-type: none;
+	border: 1px solid #eee;
+	padding: 8px;
+	margin: 3px;
+	font-size: 12px;
+	background-color: #e2e8ff;
+}

@@ -1,0 +1,918 @@
+Gruppo:
+  Field_force:
+    nome: Field Force CHC
+    Utenti: [Utente1]
+  Agenzia:
+    nome: Account Agenzia
+    Utenti: [Utente1, Utente2]
+  CSO:
+    nome: CSO Pharmitalia
+    Utenti: [Utente3]
+  Sede:
+    nome: Utenti di Sede
+    Utenti: [Utente2, Utente3]
+  Manager:
+    nome: Area Manager
+    Utenti: [Utente4]
+
+Utente:
+  Utente1:
+    login: utente1
+    nome_completo: nome1 cognome1
+    email: utente1@pharma3D.it
+    password: utente1
+    numtel: 01841111111
+    numcel: 3331111111
+    note: Il primo utente importato
+  Utente2:
+    login: utente2
+    nome_completo: nome2 cognome2
+    email: utente2@pharma3D.it
+    password: utente2
+    numtel: 01842222222
+    numcel: 3332222222
+    note: Il secondo utente importato
+  Utente3:
+    login: utente3
+    nome_completo: nome3 cognome3
+    email: utente3@pharma3D.it
+    password: utente3
+    numtel: 01843333333
+    numcel: 3333333333
+    note: Il terzo utente importato
+  Utente4:
+    login: utente4
+    nome_completo: nome4 cognome4
+    email: utente4@pharma3D.it
+    password: utente4
+    numtel: 01844444444
+    numcel: 3334444444
+    note: Il quarto utente importato
+  Utente5:
+    login: utente5
+    nome_completo: nome5 cognome5
+    email: utente5@pharma3D.it
+    password: utente5
+    numtel: 05845555555
+    numcel: 3335555555
+    note: Utente importato
+  Utente6:
+    login: utente6
+    nome_completo: nome6 cognome6
+    email: utente6@pharma3D.it
+    password: utente6
+    numtel: 05846666666
+    numcel: 3336666666
+    note: Utente importato
+  Utente7:
+    login: utente7
+    nome_completo: nome7 cognome7
+    email: utente7@pharma7D.it
+    password: utente7
+    numtel: 05847777777
+    numcel: 7777777777
+    note: Utente importato
+  Utente8:
+    login: utente8
+    nome_completo: nome8 cognome8
+    email: utente8@pharma7D.it
+    password: utente8
+    numtel: 05888888888
+    numcel: 7778888888
+    note: Utente importato
+  Utente9:
+    login: utente9
+    nome_completo: nome9 cognome7
+    email: utente9@pharma7D.it
+    password: utente9
+    numtel: 05847777777
+    numcel: 7777777777
+    note: Utente importato
+  Utente10:
+    login: utente10
+    nome_completo: nome10 cognome10
+    email: utente10@pharma7D.it
+    password: utente10
+    numtel: 05888888888
+    numcel: 7778888888
+    note: Utente importato  
+    
+Advisor:
+  Advisor1:
+    id: adv01
+    Utente: Utente5
+  Advisor2:
+    id: adv02
+    Utente: Utente6
+  Advisor3:
+    id: adv03
+    Utente: Utente7
+    
+Agente:
+  Agente1:
+    id: ag01
+    Utente: Utente8
+  Agente2:
+    id: ag02
+    Utente: Utente9
+  Agente3:
+    id: ag03
+    Utente: Utente10
+    
+Area:
+  Area1:
+    id: ar01
+    descrizione: Area ar01
+    Agente: Agente2
+  Area2:
+    id: ar02
+    descrizione: Area ar02
+    Agente: Agente3
+  Area3:
+    id: ar03
+    descrizione: Area ar03
+    Agente: Agente1  
+
+Microarea:
+  Micro1:
+    id: mic01
+    descrizione: questa è la microarea 1
+    Area: Area2
+    Provincia: TO
+    Advisor: Advisor1
+  Micro2:
+    id: mic02
+    descrizione: questa è la microarea 2
+    Area: Area3
+    Provincia: TO
+    Advisor: Advisor3
+  Micro3:
+    id: mic03
+    descrizione: questa è la microarea3
+    Area: Area1
+    Provincia: IM
+    Advisor: Advisor2
+  Micro4:
+    id: mic04
+    descrizione: questa è la microarea 4
+    Area: Area2
+    Provincia: IM
+    Advisor: Advisor1
+  Micro5:
+    id: mic05
+    descrizione: questa è la microarea 5
+    Area: Area2
+    Provincia: MI
+    Advisor: Advisor3
+  Micro6:
+    id: mic06
+    descrizione: questa è la microarea 6
+    Area: Area3
+    Provincia: BO
+    Advisor: Advisor2
+  Micro7:
+    id: mic07
+    descrizione: questa è la microarea 7
+    Area: Area2
+    Provincia: PI
+    Advisor: Advisor2
+Linea:
+  Linea1:
+    id: lin01
+    descrizione: Descrizione linea 1
+  Linea2:
+    id: lin02
+    descrizione: Descrizione linea 2
+  Linea3:
+    id: lin03
+    descrizione: Descrizione linea 3
+  Linea4:
+    id: lin04
+    descrizione: Descrizione linea 4
+
+Farmacia:
+  Farma1:
+    id: 1111 
+    denominazione: Farmacia 1
+    indirizzo: Via Uno, 1
+    cap: 11111
+    localita: Unania
+    partita_iva: 11111111111
+    numtel: 1111111
+    numfax: 11111111
+    email: uno@uno.it
+    contatto: Vincenzo Uno
+    numtel_contatto: 12121212
+    email_contatto: vincenzo.uno@uno.it
+    stato: attivo
+    Linea: Linea1
+    Microarea: Micro3
+  Farma2:
+    id: 22222
+    denominazione: Farmacia 2
+    indirizzo: Via Uno, 2
+    cap: 11112
+    localita: Duania
+    partita_iva: 22111111111
+    numtel: 1111122
+    numfax: 11111122
+    email: due@uno.it
+    contatto: Vincenzo Due
+    numtel_contatto: 22121212
+    email_contatto: vincenzo.due@uno.it
+    stato: attivo
+    Linea: Linea2
+    Microarea: Micro1
+  Farma3:
+    id: 1133 
+    denominazione: Farmacia 3
+    indirizzo: Via Uno, 3
+    cap: 11113
+    localita: Triania
+    partita_iva: 33111111111
+    numtel: 1111133
+    numfax: 11111133
+    email: tre@uno.it
+    contatto: Vincenzo tre
+    numtel_contatto: 32121212
+    email_contatto: vincenzo.tre@uno.it
+    stato: attivabile
+    Linea: Linea3
+    Microarea: Micro4
+  Farma4:
+    id: 1114 
+    denominazione: Farmacia 4
+    indirizzo: Via Uno, 4
+    cap: 11114
+    localita: Tettarania
+    partita_iva: 41111111111
+    numtel: 1111114
+    numfax: 11111114
+    email: quattro@uno.it
+    contatto: Vincenzo Uno4
+    numtel_contatto: 12121214
+    email_contatto: vincenzo.uno4@uno.it
+    stato: non interessato
+    Linea: Linea4
+    Microarea: Micro2
+  Farma5:
+    id: 11115 
+    denominazione: Farmacia 5
+    indirizzo: Via Uno, 15
+    cap: 11115
+    localita: Pentania
+    partita_iva: 51111111111
+    numtel: 1111115
+    numfax: 11111115
+    email: uno@uno5.it
+    contatto: Vincenzo Cinque
+    numtel_contatto: 12121215
+    email_contatto: vincenzo.uno5@uno.it
+    stato: attivato da ADV
+    Linea: Linea1
+    Microarea: Micro4
+  Farma6:
+    id: 1116 
+    denominazione: Farmacia 6
+    indirizzo: Via Uno, 6
+    cap: 11116
+    localita: Sexania
+    partita_iva: 11111111116
+    numtel: 1111116
+    numfax: 11111116
+    email: uno@uno6.it
+    contatto: Vincenzo Sei
+    numtel_contatto: 62121212
+    email_contatto: vincenzo.uno@uno6.it
+    stato: attivo
+    Linea: Linea3
+    Microarea: Micro6
+  Farma7:
+    id: 11117 
+    denominazione: Farmacia 7
+    indirizzo: Via Uno, 7
+    cap: 11117
+    localita: Septania
+    partita_iva: 71111111111
+    numtel: 1111117
+    numfax: 111111171
+    email: uno@uno7.it
+    contatto: Vincenzo Sette
+    numtel_contatto: 121212127
+    email_contatto: vincenzo.uno@uno7.it
+    stato: attivo
+    Linea: Linea3
+    Microarea: Micro3
+  Farma8:
+    id: 11118 
+    denominazione: Farmacia 8
+    indirizzo: Via Uno, 8
+    cap: 11118
+    localita: Ottania
+    partita_iva: 11111111118
+    numtel: 1111118
+    numfax: 111111181
+    email: uno@uno8.it
+    contatto: Vincenzo Otto
+    numtel_contatto: 121212128
+    email_contatto: vincenzo.uno@uno8.it
+    stato: attivabile
+    Linea: Linea3
+    Microarea: Micro5
+
+Tipoattivita:
+  Store:
+    nome: Store check
+    impegno: 2
+  Merch:
+    nome: Merchandising
+    impegno: 1
+  Evento:
+    nome: Evento
+    impegno: 3
+    
+Attivita:
+  Att1:
+    giorno:  2011-03-01
+    ora_inizio: 09:00
+    ora_fine: 13:00
+    Tipoattivita: Store
+    Farmacia: Farma1
+  Att2:
+    giorno: 2011-03-03
+    ora_inizio: 10:00
+    ora_fine: 13:00
+    Tipoattivita: Merch
+    Farmacia: Farma1
+  Att3:
+    giorno: 2011-03-01
+    ora_inizio: 10:00
+    ora_fine: 12:00
+    Tipoattivita: Evento
+    Farmacia: Farma2
+  Att4:
+    giorno: 2011-03-06
+    ora_inizio: 11:00
+    ora_fine: 16:00
+    Tipoattivita: Evento
+    Farmacia: Farma4
+  Att5:
+    giorno: 2011-03-14
+    ora_inizio: 10:00
+    ora_fine: 17:00
+    Tipoattivita: Store
+    Farmacia: Farma5
+  Att6:
+    giorno: 2011-03-01
+    ora_inizio: 09:00
+    ora_fine: 12:00
+    Tipoattivita: Merch
+    Farmacia: Farma8
+  Att7:
+    giorno: 2011-03-20
+    ora_inizio: 10:30
+    ora_fine: 12:00
+    Tipoattivita: Store
+    Farmacia: Farma4
+  Att8:
+    giorno: 2011-03-22
+    ora_inizio: 09:00
+    ora_fine:  13:00
+    Tipoattivita: Evento
+    Farmacia: Farma2
+  Att9:
+    giorno: 2011-03-23
+    ora_inizio: 15:00
+    ora_fine: 20:00
+    Tipoattivita: Store
+    Farmacia: Farma5
+  Att10:
+    giorno: 2011-03-26
+    ora_inizio: 09:00
+    ora_fine: 13:30
+    Tipoattivita: Merch
+    Farmacia: Farma6
+  Att11:
+    giorno: 2011-03-27
+    ora_inizio: 09:00
+    ora_fine: 12:20
+    Tipoattivita: Store
+    Farmacia: Farma4
+  Att12:
+    giorno: 2011-03-30
+    ora_inizio: 09:00
+    ora_fine: 16:30
+    Tipoattivita: Evento
+    Farmacia: Farma8
+  
+Regione:
+  Regione_1:
+    id: '1'
+    ripartizione_geografica: NORD-OCCIDENTALE
+    nome: PIEMONTE
+  Regione_2:
+    id: '2'
+    ripartizione_geografica: NORD-OCCIDENTALE
+    nome: 'VALLE D''AOSTA/VALLÉE D''AOSTE'
+  Regione_3:
+    id: '3'
+    ripartizione_geografica: NORD-OCCIDENTALE
+    nome: LOMBARDIA
+  Regione_4:
+    id: '4'
+    ripartizione_geografica: NORD-ORIENTALE
+    nome: 'TRENTINO-ALTO ADIGE'
+  Regione_5:
+    id: '5'
+    ripartizione_geografica: NORD-ORIENTALE
+    nome: VENETO
+  Regione_6:
+    id: '6'
+    ripartizione_geografica: NORD-ORIENTALE
+    nome: 'FRIULI-VENEZIA GIULIA'
+  Regione_7:
+    id: '7'
+    ripartizione_geografica: NORD-OCCIDENTALE
+    nome: LIGURIA
+  Regione_8:
+    id: '8'
+    ripartizione_geografica: NORD-ORIENTALE
+    nome: EMILIA-ROMAGNA
+  Regione_9:
+    id: '9'
+    ripartizione_geografica: CENTRALE
+    nome: TOSCANA
+  Regione_10:
+    id: '10'
+    ripartizione_geografica: CENTRALE
+    nome: UMBRIA
+  Regione_11:
+    id: '11'
+    ripartizione_geografica: CENTRALE
+    nome: MARCHE
+  Regione_12:
+    id: '12'
+    ripartizione_geografica: CENTRALE
+    nome: LAZIO
+  Regione_13:
+    id: '13'
+    ripartizione_geografica: MERIDIONALE
+    nome: ABRUZZO
+  Regione_14:
+    id: '14'
+    ripartizione_geografica: MERIDIONALE
+    nome: MOLISE
+  Regione_15:
+    id: '15'
+    ripartizione_geografica: MERIDIONALE
+    nome: CAMPANIA
+  Regione_16:
+    id: '16'
+    ripartizione_geografica: MERIDIONALE
+    nome: PUGLIA
+  Regione_17:
+    id: '17'
+    ripartizione_geografica: MERIDIONALE
+    nome: BASILICATA
+  Regione_18:
+    id: '18'
+    ripartizione_geografica: MERIDIONALE
+    nome: CALABRIA
+  Regione_19:
+    id: '19'
+    ripartizione_geografica: INSULARE
+    nome: SICILIA
+  Regione_20:
+    id: '20'
+    ripartizione_geografica: INSULARE
+    nome: SARDEGNA
+    
+Provincia:
+  AG:
+    nome: Agrigento
+    id: AG
+    regione_id: '19'
+  AL:
+    nome: Alessandria
+    id: AL
+    regione_id: '1'
+  AN:
+    nome: Ancona
+    id: AN
+    regione_id: '11'
+  AO:
+    nome: 'Valle d''Aosta/Vallée d''Aoste'
+    id: AO
+    regione_id: '2'
+  AP:
+    nome: 'Ascoli Piceno'
+    id: AP
+    regione_id: '11'
+  AQ:
+    nome: 'L''Aquila'
+    id: AQ
+    regione_id: '13'
+  AR:
+    nome: Arezzo
+    id: AR
+    regione_id: '9'
+  AT:
+    nome: Asti
+    id: AT
+    regione_id: '1'
+  AV:
+    nome: Avellino
+    id: AV
+    regione_id: '15'
+  BA:
+    nome: Bari
+    id: BA
+    regione_id: '16'
+  BG:
+    nome: Bergamo
+    id: BG
+    regione_id: '3'
+  BI:
+    nome: Biella
+    id: BI
+    regione_id: '1'
+  BL:
+    nome: Belluno
+    id: BL
+    regione_id: '5'
+  BN:
+    nome: Benevento
+    id: BN
+    regione_id: '15'
+  BO:
+    nome: Bologna
+    id: BO
+    regione_id: '8'
+  BR:
+    nome: Brindisi
+    id: BR
+    regione_id: '16'
+  BS:
+    nome: Brescia
+    id: BS
+    regione_id: '3'
+  BZ:
+    nome: Bolzano/Bozen
+    id: BZ
+    regione_id: '4'
+  CA:
+    nome: Cagliari
+    id: CA
+    regione_id: '20'
+  CB:
+    nome: Campobasso
+    id: CB
+    regione_id: '14'
+  CE:
+    nome: Caserta
+    id: CE
+    regione_id: '15'
+  CH:
+    nome: Chieti
+    id: CH
+    regione_id: '13'
+  CI:
+    nome: Carbonia-Iglesias
+    id: CI
+    regione_id: '20'
+  CL:
+    nome: Caltanissetta
+    id: CL
+    regione_id: '19'
+  CN:
+    nome: Cuneo
+    id: CN
+    regione_id: '1'
+  CO:
+    nome: Como
+    id: CO
+    regione_id: '3'
+  CR:
+    nome: Cremona
+    id: CR
+    regione_id: '3'
+  CS:
+    nome: Cosenza
+    id: CS
+    regione_id: '18'
+  CT:
+    nome: Catania
+    id: CT
+    regione_id: '19'
+  CZ:
+    nome: Catanzaro
+    id: CZ
+    regione_id: '18'
+  EN:
+    nome: Enna
+    id: EN
+    regione_id: '19'
+  FC:
+    nome: Forl�-Cesena
+    id: FC
+    regione_id: '8'
+  FE:
+    nome: Ferrara
+    id: FE
+    regione_id: '8'
+  FG:
+    nome: Foggia
+    id: FG
+    regione_id: '16'
+  FI:
+    nome: Firenze
+    id: FI
+    regione_id: '9'
+  FR:
+    nome: Frosinone
+    id: FR
+    regione_id: '12'
+  GE:
+    nome: Genova
+    id: GE
+    regione_id: '7'
+  GO:
+    nome: Gorizia
+    id: GO
+    regione_id: '6'
+  GR:
+    nome: Grosseto
+    id: GR
+    regione_id: '9'
+  IM:
+    nome: Imperia
+    id: IM
+    regione_id: '7'
+  IS:
+    nome: Isernia
+    id: IS
+    regione_id: '14'
+  KR:
+    nome: Crotone
+    id: KR
+    regione_id: '18'
+  LC:
+    nome: Lecco
+    id: LC
+    regione_id: '3'
+  LE:
+    nome: Lecce
+    id: LE
+    regione_id: '16'
+  LI:
+    nome: Livorno
+    id: LI
+    regione_id: '9'
+  LO:
+    nome: Lodi
+    id: LO
+    regione_id: '3'
+  LT:
+    nome: Latina
+    id: LT
+    regione_id: '12'
+  LU:
+    nome: Lucca
+    id: LU
+    regione_id: '9'
+  MC:
+    nome: Macerata
+    id: MC
+    regione_id: '11'
+  ME:
+    nome: Messina
+    id: ME
+    regione_id: '19'
+  MI:
+    nome: Milano
+    id: MI
+    regione_id: '3'
+  MN:
+    nome: Mantova
+    id: MN
+    regione_id: '3'
+  MO:
+    nome: Modena
+    id: MO
+    regione_id: '8'
+  MS:
+    nome: Massa-Carrara
+    id: MS
+    regione_id: '9'
+  MT:
+    nome: Matera
+    id: MT
+    regione_id: '17'
+  NA:
+    nome: Napoli
+    id: NA
+    regione_id: '15'
+  NO:
+    nome: Novara
+    id: NO
+    regione_id: '1'
+  NU:
+    nome: Nuoro
+    id: NU
+    regione_id: '20'
+  OG:
+    nome: Ogliastra
+    id: OG
+    regione_id: '20'
+  OR:
+    nome: Oristano
+    id: OR
+    regione_id: '20'
+  OT:
+    nome: Olbia-Tempio
+    id: OT
+    regione_id: '20'
+  PA:
+    nome: Palermo
+    id: PA
+    regione_id: '19'
+  PC:
+    nome: Piacenza
+    id: PC
+    regione_id: '8'
+  PD:
+    nome: Padova
+    id: PD
+    regione_id: '5'
+  PE:
+    nome: Pescara
+    id: PE
+    regione_id: '13'
+  PG:
+    nome: Perugia
+    id: PG
+    regione_id: '10'
+  PI:
+    nome: Pisa
+    id: PI
+    regione_id: '9'
+  PN:
+    nome: Pordenone
+    id: PN
+    regione_id: '6'
+  PO:
+    nome: Prato
+    id: PO
+    regione_id: '9'
+  PR:
+    nome: Parma
+    id: PR
+    regione_id: '8'
+  PT:
+    nome: Pistoia
+    id: PT
+    regione_id: '9'
+  PU:
+    nome: 'Pesaro Urbino'
+    id: PU
+    regione_id: '11'
+  PV:
+    nome: Pavia
+    id: PV
+    regione_id: '3'
+  PZ:
+    nome: Potenza
+    id: PZ
+    regione_id: '17'
+  RA:
+    nome: Ravenna
+    id: RA
+    regione_id: '8'
+  RC:
+    nome: 'Reggio di Calabria'
+    id: RC
+    regione_id: '18'
+  RE:
+    nome: 'Reggio nell''Emilia'
+    id: RE
+    regione_id: '8'
+  RG:
+    nome: Ragusa
+    id: RG
+    regione_id: '19'
+  RI:
+    nome: Rieti
+    id: RI
+    regione_id: '12'
+  RM:
+    nome: Roma
+    id: RM
+    regione_id: '12'
+  RN:
+    nome: Rimini
+    id: RN
+    regione_id: '8'
+  RO:
+    nome: Rovigo
+    id: RO
+    regione_id: '5'
+  SA:
+    nome: Salerno
+    id: SA
+    regione_id: '15'
+  SI:
+    nome: Siena
+    id: SI
+    regione_id: '9'
+  SO:
+    nome: Sondrio
+    id: SO
+    regione_id: '3'
+  SP:
+    nome: 'La Spezia'
+    id: SP
+    regione_id: '7'
+  SR:
+    nome: Siracusa
+    id: SR
+    regione_id: '19'
+  SS:
+    nome: Sassari
+    id: SS
+    regione_id: '20'
+  SV:
+    nome: Savona
+    id: SV
+    regione_id: '7'
+  TA:
+    nome: Taranto
+    id: TA
+    regione_id: '16'
+  TE:
+    nome: Teramo
+    id: TE
+    regione_id: '13'
+  TN:
+    nome: Trento
+    id: TN
+    regione_id: '4'
+  TO:
+    nome: Torino
+    id: TO
+    regione_id: '1'
+  TP:
+    nome: Trapani
+    id: TP
+    regione_id: '19'
+  TR:
+    nome: Terni
+    id: TR
+    regione_id: '10'
+  TS:
+    nome: Trieste
+    id: TS
+    regione_id: '6'
+  TV:
+    nome: Treviso
+    id: TV
+    regione_id: '5'
+  UD:
+    nome: Udine
+    id: UD
+    regione_id: '6'
+  VA:
+    nome: Varese
+    id: VA
+    regione_id: '3'
+  VB:
+    nome: Verbano-Cusio-Ossola
+    id: VB
+    regione_id: '1'
+  VC:
+    nome: Vercelli
+    id: VC
+    regione_id: '1'
+  VE:
+    nome: Venezia
+    id: VE
+    regione_id: '5'
+  VI:
+    nome: Vicenza
+    id: VI
+    regione_id: '5'
+  VR:
+    nome: Verona
+    id: VR
+    regione_id: '5'
+  VS:
+    nome: 'Medio Campidano'
+    id: VS
+    regione_id: '20'
+  VT:
+    nome: Viterbo
+    id: VT
+    regione_id: '12'
+  VV:
+    nome: 'Vibo Valentia'
+    id: VV
+    regione_id: '18'

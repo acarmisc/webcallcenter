@@ -1,0 +1,44 @@
+select {
+	display: none;
+}
+
+.noprint {
+display: none;
+}
+
+body {
+	color: #000;
+	margin: 0.5cm;
+	font: 11px "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+
+input[type=text] {
+	border-style: hidden;
+	border-bottom: 1px solid #8a8a8a;
+	font-size: 11px;
+	margin: 3px;
+}
+
+.hide-me {
+	display: block;
+}
+
+.servizi {
+	font-size: 10px;
+}
+
+.input[type=checkbox] {
+	border: 1px solid #383838;
+}
+
+#header {
+	display: none;
+}
+
+#toolbar {
+	display: none;
+}
+
+input[type=submit] {
+	
+}

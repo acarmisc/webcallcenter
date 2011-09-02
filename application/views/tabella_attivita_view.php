@@ -1,0 +1,1 @@
+<!-- <a href="#" onclick="test_storecheck()">prova storecheck</a> -->

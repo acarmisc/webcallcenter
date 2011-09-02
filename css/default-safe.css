@@ -1,0 +1,186 @@
+body {
+	background-color: #dfe3e6;
+	font: 11px "Lucida Grande", Lucida, Verdana, sans-serif;
+	color: #505353;
+	margin: 0px;
+}
+
+a, a:visited {
+	color: #27afd6;
+}
+
+#main_body {
+	position: relative;
+	margin: auto;
+	width: 1300px;
+	margin-top: 10px;
+}
+
+
+#login_box, #toolbar {
+	float: left;
+	width: 230px;
+	background-color: #e9eef0;
+	padding: 2px;
+	border: 1px solid #b9ddf0;
+}
+
+#login_box input[type=text], #login_box input[type=password] {
+	border: 1px inset #d5d5d5;
+	padding: 4px;
+	font: 12px "Lucida Grande", Verdana, Lucida, sans-serif;
+}
+
+#login_box input[type=text]:focus, #login_box input[type=password]:focus {
+	background-color: #d6eadc;
+}
+
+#welcome_box {
+	float: right;
+	width: 650px;
+	background: url(img/chem.png) no-repeat right bottom;
+	min-height: 400px;
+}
+
+#header {
+	background-color: #383939;
+	padding: 8px;
+	min-height: 44px;
+	border-bottom: 1px groove #000;
+}
+/*
+#toolbar {
+	min-height: 40px;
+	min-width: 250px;
+	padding: 10px;
+	color: #7d7d7d;
+	position: absolute;
+	top: 5px;
+	right: 200px;
+}*/
+
+#logo {
+	position: absolute;
+	top: 2px;
+	left: 2px;
+}
+
+#user_logged {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background-color: #4c4d4d;
+	border-left: 1px solid #5b5d5d;
+	padding: 10px;
+	min-height: 40px;
+	min-width: 200px;
+	color: #fffeff;
+	font-family: Verdana, "Lucida Grande", Lucida, sans-serif;
+}
+
+#footer {
+	background-color: #383939;
+	padding: 8px;
+	min-height: 50px;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+}
+
+#core_space {
+	width: 800px;
+	min-height: 200px;
+	background-color: #fffeff;
+	border: 1px solid #cbd9ed;
+	margin: auto;
+	margin-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+
+#core_space h1 {
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	padding: 3px;
+	color: #3985ff;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	border-bottom: 1px solid #d7e4f3;
+	background-color:#C1D4E4;
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-topright: 6px;	
+	-webkit-border-radius-topleft: 6px;
+	-webkit-border-radius-topright: 6px;		
+}
+
+#core_space p {
+	padding: 0px;
+	margin: 3px;
+}
+
+.formRicercaFarmaciaClass {
+	background-color: #C9DCF5 ;
+	-moz-border-radius-bottomleft: 6px;
+	-moz-border-radius-bottomright: 6px;	
+	-webkit-border-radius-bottomleft: 6px;
+	-webkit-border-radius-bottomright: 6px;	
+	padding: 3px;
+}
+
+.formRicercaFarmaciaClass label {
+	color: #6e6e6e;
+}
+
+.formRicercaFarmaciaClass input[type=text] {
+	background-color: #f1faf5;
+	padding: 3px;
+	border: 1px solid #e7e7e7;
+}
+
+.formRicercaFarmaciaClass input[type=text]:focus {
+	background-color: #d1f9dd;
+	border: 1px solid #d6d6d6;
+}
+
+
+.tableRisRicClass {
+	border: 1px solid #d6d6d6;
+	width: 100%;
+	background-color: #C9DCF5 ;
+	-moz-border-radius-bottomleft: 6px;
+	-moz-border-radius-bottomright: 6px;	
+	-webkit-border-radius-bottomleft: 6px;
+	-webkit-border-radius-bottomright: 6px;	
+	padding: 3px;
+}
+
+.tableRisRic_rigaHeadClass td {
+	border: 1px solid #d6d6d6;
+	padding: 2px;
+}
+
+.tableRisRic_rigaDispariClass td {
+	border: 1px solid #d6d6d6;
+	background-color: white;
+	padding: 2px;
+}
+
+.tableRisRic_rigaPariClass td {
+	border: 1px solid #d6d6d6;
+	background-color: white;
+	padding: 2px;
+}
+.divFormRisClass {
+
+}
+
+.formRisClass {
+	
+}
+
+.formVisualizzaFarmaciaClass input {
+	background-color: white;
+	color: black;
+}

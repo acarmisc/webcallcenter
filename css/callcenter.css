@@ -1,0 +1,334 @@
+.navbar {
+	background-color: #595e69;
+	position: absolute;
+	margin: auto;
+	top: 0px;
+	left: 200px;
+	-moz-border-radius-bottomright: 8px;
+	-moz-border-radius-bottomleft: 8px;
+	color: #fffeff;
+}
+
+img {
+	vertical-align: middle;
+	border: 0;
+}
+
+.overlay {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.8);
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 800;
+}
+
+.navbar li {
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.navbar li:hover {
+	color: #ffb600;
+	cursor: pointer;
+	background-color: #620000;
+}
+
+.navbar li a {
+	color: #fffeff;
+	text-decoration: none;
+}
+
+.navbar ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+.callcenter-login-form {
+	position: relative;
+	margin: 30px auto auto;
+	width: 450px;
+	height: 200px;
+	border: 3px solid #c5d2d6;
+	-moz-border-radius:10px;
+	background-color: #fffeff;
+	padding: 10px;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+.callcenter-login-form h2 {
+	margin: 0px;
+	font-size: 30px;
+}
+
+.callcenter-login-form p {
+	background-color: #eaf4f9;
+	-moz-border-radius:10px;
+	padding: 4px;
+	text-align: right;
+}
+
+.callcenter-login-form label {
+	color: #3e5289;
+	font-size: 15px;
+
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.callcenter-login-form input[type=text], .callcenter-login-form input[type=password] {
+	background-color: #ffffff;
+	-moz-border-radius:8px;
+	padding: 8px;
+	border: 1px solid #cee4f6;
+	font: normal normal 16px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+.callcenter-alert {
+	width: 960px;
+	padding: 4px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	border: 1px solid #fb9958;
+	background-color: #feebd9;
+	color: #623200;
+}
+
+.callcenter-alert li {
+	list-style: none;
+}
+
+#callcenter_body {
+	width: 960px;
+	position: relative;
+	margin: auto;
+	margin-top: 5px;
+}
+
+.callcenter-callslist {
+	max-height: 500px;
+	overflow-y:scroll;
+}
+
+.callcenter-farmacia-view {
+	font-size: 11px;
+	padding: 0;
+	background-color: #fffeff;
+	border: 1px solid #8f8f8f;
+	-moz-box-shadow:0px 0px 5px #666;
+	-webkit-box-shadow:0px 0px 4px #666;
+	margin-top: 10px;		
+}
+
+.callcenter-farmacia-view h1 {
+	background-color: #2273ff;
+	color: #fffeff;
+	font-size: 15px;
+	font-weight: normal;
+	font-style: normal;
+	margin: 0;
+	padding: 4px;
+	border-bottom: 3px solid #82b2ff;
+}
+
+.callcenter-farmacia-view h2 {
+	font-size: 14px;
+	font-weight: normal;
+	font-style: normal;
+	margin: 0 0 3px;
+	color: #2068ff;
+}
+
+.callcenter-farmacia-view h3 {
+	font-size: 12px;
+	font-weight: normal;
+	font-style: normal;
+	margin: 2px 0 3px;
+	color: #546a91;
+	border-bottom: 1px solid #bcbcbc;
+}
+
+.callcenter-farmacia-view .pan-1 {
+	width: 500px;
+	display: inline-table;
+	vertical-align: top;
+	background-color: #f8f8f8;
+	padding-left: 3px;
+}
+
+.callcenter-farmacia-view .pan-2 {
+	width: 300px;
+	display: inline-table;
+	vertical-align: top;
+}
+
+.callcenter-farmacia-view p {
+}
+
+.callcenter-farmacia-view label {
+	color: #2f353a;
+	font-weight: bold;
+	min-width: 80px;
+	padding: 3px 5px 3px 3px;
+	margin: 0px;
+	display: inline-table;
+	width: 100px;
+}
+
+.callcenter-farmacia-view input[type=text] {
+	width: 250px;
+}
+
+.callcenter-farmacia-view .value {
+	padding: 3px 5px 3px 3px;
+	margin: 0px;
+	color: #534b43;
+}
+
+.callcenter-farmacia-view .long-value {
+	
+	padding: 3px;
+	margin: 3px;
+}
+
+.tableRisRicClass tr.rimandato td {
+	background-color: #ffdfc2;
+}
+
+.tableRisRicClass tr.confermato td {
+	background-color: #d8ffe0;
+}
+
+.tableRisRicClass tr.current td {
+	color: #cfcfcf;
+}
+
+.smart-dialog {
+	min-width: 300px;
+	height: 90px;
+	position: absolute;
+	background-color: rgba(255,254,255,0.76);
+	margin-left: -320px;
+	margin-top: 20px;
+	border: 1px solid #cbcbcb;
+	padding: 2px;
+}
+
+.cc-legenda {
+	color: #747474;
+	background-color: #fffeff;
+	border: 1px solid #cbcbcb;
+	padding: 3px;
+}
+
+.edit-farma {
+	float: right;
+	margin-right: 10px;
+	margin-top: 5px;
+	text-align: right;
+}
+
+.edit_locally {
+	cursor: pointer;
+}
+
+.positive-msg {
+	color: #00cf2b;
+}
+
+.negative-msg {
+	color: #ff5700;
+}
+
+.suggestion {
+	color: #c1c1c1;
+}
+
+.send-mail-box h2{
+	background-color: #ff7100;
+	color: #fffeff;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 3px;
+	margin: 0;
+}
+
+.send-mail-box {
+	background-color: #deecff;
+	border: 1px solid #7ba1ca;
+	padding: 3px;
+	position: absolute;
+	top: 40px;
+	left: 50%;
+	margin: 0 auto;
+	z-index: 900;
+	font: 10px "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+
+.send-mail-box textarea{
+	font: 10px "Lucida Grande", Lucida, Verdana, sans-serif;
+	color: #232d39;
+}
+
+.send-mail-box p{
+	margin: 2px;
+}
+
+.send-mail-box h4 {
+	margin: 0px 0px 3px;
+}
+
+
+
+.send-mail-box label {
+	color: #3e5289;
+	font-size: 10px;
+	width: 90px;
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.top-dialog {
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	margin-left: -300px;
+	z-index: 800;
+	width: 600px;
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 10px;	
+	-webkit-border-radius-bottomleft: 10px;
+	-webkit-border-radius-bottomright: 10px;
+	background-color: rgba(255,254,255,0.95);
+	box-shadow: 1px 1px 3px #666;
+	font: 10px "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+
+.top-dialog form {
+	margin: 5px;
+}
+
+.top-dialog h3{
+	background-color: #ff7100;
+	color: #fffeff;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 3px;
+	margin: 0;
+}
+
+.top-dialog label {
+	color: #2f353a;
+	font-weight: bold;
+	min-width: 80px;
+	padding: 3px 5px 3px 3px;
+	margin: 0px;
+	display: inline-table;
+	width: 100px;
+}

@@ -1,0 +1,466 @@
+---
+options:
+  collate: utf8_general_ci
+  charset: utf8
+  type: InnoDB
+
+
+Utente:
+  actAs: [SoftDelete]
+  tableName: utente
+  columns:
+    login:
+      type: string(15)
+      notnull: true
+      default: ''
+    nome_completo:
+      type: string(50)
+      notnull: true
+      default: ''
+    email:
+      type: string(50)
+      notnull: true
+      default: ''
+    password:
+      type: string(50)
+      notnull: true
+      default: ''
+    numtel:
+      type: string(15)
+      notnull: true
+      default: ''
+    numcel:
+      type: string(15)
+      notnull: true
+      default: ''
+    note:
+      type: string(255)
+      notnull: true
+      default: ''
+  relations:
+    Gruppi:
+       class: Gruppo
+       foreignAlias: Utenti
+       refClass: Utente_Gruppo
+    Advisor:
+      class: Advisor
+      type: one
+      local: id
+      foreign: utente_id
+      foreignAlias: Utente
+    Agente:
+      class: Agente
+      type: one
+      local: id
+      foreign: utente_id
+      foreignAlias: Utente
+  indexes:
+    Login:
+      fields: [login]
+  options:
+    charset: utf8
+    export: all
+    validate: true
+
+Gruppo:
+  tableName: gruppo
+  actAs: [SoftDelete]
+  columns:
+    id:
+      type: integer(4)
+      autoincrement: true
+      primary: true
+    nome:
+      type: string(10)
+      default: null
+      fixed: true
+  relations:
+      Utenti:
+         class: Utente
+         foreignAlias: Gruppi
+         refClass: Utente_Gruppo  
+         onDelete: cascade
+         onUpdate: cascade  
+  options:
+    export: all
+    validate: true
+    charset: utf8
+
+Utente_Gruppo:
+  tableName: utente_gruppo
+  columns:
+    utente_id:
+      type: integer(4)
+      default: 0
+      notnull: false
+    gruppo_id:
+      type: integer(4)
+      default: 0
+      notnull: false
+  relations:
+    Utente:
+      class: Utente
+      local: utente_id
+      foreign: id
+      foreignAlias: Gruppi_Utente
+      onDelete: set null
+      onUpdate: cascade
+    Gruppo:
+      class: Gruppo
+      local: gruppo_id
+      foreign: id
+      foreignAlias: Utenti_Gruppo
+      onDelete: set null
+      onUpdate: cascade
+  indexes:
+    Utente_id:
+      fields: [utente_id]
+    Gruppo_id:
+      fields: [gruppo_id]
+  options:
+    charset: utf8
+    
+Advisor:
+  actAs: [SoftDelete]
+  columns:
+    id:
+      type: string(5)
+      primary: true
+      notnull: true
+      default: ''
+      fixed: true
+    utente_id:
+      type: integer(4)
+      default: 0
+      notnull: true
+  relations:
+    Utente:
+      type: one
+      class: Utente
+      local: utente_id
+      foreign: id
+      foreignAlias: Advisor
+      onUpdate: cascade
+    Microaree:
+      type: many
+      class: Microarea
+      local: id
+      foreign: advisor_id
+      foreignAlias: Advisor
+  indexes:
+    Utente_id:
+      fields: [utente_id]
+  options:
+    charset: utf8
+
+Agente:
+  actAs: [SoftDelete]
+  columns:
+    id:
+      type: string(5)
+      primary: true
+      notnull: true
+      default: ''
+      fixed: true
+    utente_id:
+      type: integer(4)
+      default: 0
+      notnull: true
+  relations:
+    Utente:
+      type: one
+      class: Utente
+      local: utente_id
+      foreign: id
+      foreignAlias: Agente
+      onUpdate: cascade
+    Aree:
+       type: many
+       class: Area
+       local: id
+       foreign: agente_id
+       foreignAlias: Agente
+  indexes:
+    Utente_id:
+      fields: [utente_id]
+  options:
+    charset: utf8
+    
+Area:
+  columns:
+    id:
+      type: string(5)
+      primary: true
+      notnull: true
+      default: ''
+      fixed: true
+    descrizione:
+      type: string(30)
+      default: ''
+    agente_id:
+      type: string(5)
+      notnull: true
+      default: ''
+  relations:
+    Agente:
+      type: one
+      class: Agente
+      foreignAlias: Aree
+      local: agente_id
+      foreign: id
+      onUpdate: cascade
+    Microaree:
+      type: many
+      class: Microarea
+      local: id
+      foreign: area_id
+      foreignAlias: Area
+  indexes:
+    Agente_id:
+      fields: [agente_id]
+  options:
+    charset: utf8
+
+Microarea:
+  columns:
+    id:
+      type: string(5)
+      primary: true
+      notnull: true
+      default: ''
+      fixed: true
+    descrizione:
+      type: string(20)
+      default: ''
+    area_id:
+      type: string(5)
+      notnull: true
+      fixed: true
+      default: ''
+    provincia_id:
+      type: string(2)
+      notnull: true
+      fixed: true
+      default: ''
+    advisor_id:
+      type: string(5)
+      notnull: true
+      default: ''
+  relations:
+    Area:
+      type: one
+      class: Area
+      local: area_id
+      foreign: id
+      foreignAlias: Microaree
+      onUpdate: cascade
+    Advisor:
+      type: one
+      class: Advisor
+      local: advisor_id
+      foreign: id
+      foreignAlias: Microaree
+    Provincia:
+      type: one
+      class: Provincia
+      local: provincia_id
+      foreign: id
+      foreignAlias: Microaree
+    indexes:
+      Area_id:
+        fields: [area_id]
+      Provincia_id:
+        fields: [provincia_id]
+      Advisor_id:
+        fields: [advisor_id]
+  options:
+    charset: utf8
+    
+Linea:
+  columns:
+    id:
+      type: string(10)
+      primary: true
+      notnull: true
+      default: ''
+      fixed: true
+    descrizione:
+      type: string(20)
+      default: ''
+  options:
+    charset: utf8
+
+Farmacia:
+  actAs: [SoftDelete,Timestampable]
+  columns:
+    id:
+      type: string(20)
+      primary: true
+      notnull: true
+      default: ''
+      fixed: true
+    denominazione:
+      type: string(100)
+      notnull: true
+      default: ''
+    indirizzo:
+      type: string(100)
+      default: ''
+    cap:
+      type: string(5)
+      default: ''
+      fixed: true
+    localita:
+      type: string(50)
+      notnull: true
+      default: ''
+    partita_iva:
+      type: string(20)
+      default: ''
+    numtel:
+      type: string(15)
+      default: ''
+    numfax:
+      type: string(15)
+      default: ''
+    email:
+      type: string(15)
+      default: ''
+    contatto:
+      type: string(50)
+      default: ''
+    numtel_contatto:
+      type: string(15)
+      default: ''
+    email_contatto:
+      type: string(15)
+      default: ''
+    stato:
+      type: enum
+      values: ['attivo','attivabile','non interessato','attivato da ADV']
+      default: 'attivabile'
+    linea_id:
+      type: string(10)
+      default: null
+      fixed: true
+    microarea_id:
+      type: string(5)
+      default: null
+      fixed: true
+  relations:
+    Linea:
+      class: Linea
+      type: one
+      local: linea_id
+      foreign: id
+      foreignAlias: Farmacia
+      onUpdate: cascade
+    Microarea:
+      class: Microarea
+      type: one
+      local: microarea_id
+      foreign: id
+      foreignAlias: Farmacie
+      onUpdate: cascade
+  indexes:
+    Linea_id:
+      fields: [linea_id]
+    Microarea_id:
+      fields: [microarea_id]
+  options:
+    charset: utf8
+
+Tipoattivita:
+  columns:
+    nome:
+      type: string(10)
+      fixed: true
+      notnull: true
+      default: ''
+    impegno:
+      type: int(2)
+      notnull: true
+      default: 0
+
+Attivita:
+  actAs: [SoftDelete,Timestampable]
+  columns:
+    giorno:
+      type: date
+      notnull: true
+    ora_inizio:
+      type: time
+      notnull: true
+      default: 00:01
+    ora_fine:
+      type: time
+      notnull: true
+      default: 00:01
+    tipoattivita_id:
+      type: integer(4)
+      notnull: true
+    farmacia_id:
+      type: string(20)
+      notnull: true
+  relations:
+    Farmacia:
+      type: one
+      class: Farmacia
+      local: farmacia_id
+      foreign: id
+      foreignAlias: Attivita
+      onUpdate: cascade
+    Tipoattivita:
+      type: one
+      class: Tipoattivita
+      local: tipoattivita_id
+      foreign: id
+      foreignAlias: Attivita
+      onUpdate: cascade
+    indexes:
+      TipoAttivita:
+        fields: [tipoattivita_id]
+      Farmacia:
+        fields: [farmacia_id]
+        
+Provincia:
+  tableName: provincia
+  columns:
+    id:
+      type: string(2)
+      fixed: true
+      primary: true
+      notnull: true
+      default: ''
+    nome:
+      type: string(32)
+      fixed: false
+      default: ''
+      notnull: true
+    regione_id:
+      type: integer(4)
+      default: '0'
+      notnull: true
+  relations:
+    Regione:
+      type: one
+      class: Regione
+      local: regione_id
+      foreign: id
+      foreignAlias: Province
+  indexes:
+    Regione_id:
+      fields: [regione_id]
+
+Regione:
+  tableName: regione
+  columns:
+    ripartizione_geografica:
+      type: enum
+      values: ['Nord-Occidentale','Nord-Orientale','Centrale','Meridionale','Insulare']
+      notnull: false
+    nome:
+      type: string(32)
+      fixed: false
+      default: ''
+      notnull: true

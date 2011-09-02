@@ -1,0 +1,253 @@
+.navbar {
+	background-color: #595e69;
+	position: absolute;
+	margin: auto;
+	top: 0px;
+	left: 200px;
+	-moz-border-radius-bottomright: 8px;
+	-moz-border-radius-bottomleft: 8px;
+	color: #fffeff;
+}
+
+img {
+	vertical-align: middle;
+	border: 0;
+}
+
+.overlay {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.8);
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 800;
+}
+
+.navbar li {
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.navbar li:hover {
+	color: #ffb600;
+	cursor: pointer;
+	background-color: #620000;
+}
+
+.navbar li a {
+	color: #fffeff;
+	text-decoration: none;
+}
+
+.navbar ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+.tableRisRicClass tr.rimandato td {
+	background-color: #ffdfc2;
+}
+
+.tableRisRicClass tr.confermato td {
+	background-color: #d8ffe0;
+}
+
+.tableRisRicClass tr.current td {
+	color: #cfcfcf;
+}
+
+.smart-dialog {
+	min-width: 300px;
+	height: 90px;
+	position: absolute;
+	background-color: rgba(255,254,255,0.76);
+	margin-left: -320px;
+	margin-top: 20px;
+	border: 1px solid #cbcbcb;
+	padding: 2px;
+}
+
+.cc-legenda {
+	color: #747474;
+	background-color: #fffeff;
+	border: 1px solid #cbcbcb;
+	padding: 3px;
+}
+
+.edit-farma {
+	float: right;
+	margin-right: 10px;
+	margin-top: 5px;
+	text-align: right;
+}
+
+.edit_locally {
+	cursor: pointer;
+}
+
+.positive-msg {
+	color: #00cf2b;
+}
+
+.negative-msg {
+	color: #ff5700;
+}
+
+.suggestion {
+	color: #c1c1c1;
+}
+
+.send-mail-box h2{
+	background-color: #ff7100;
+	color: #fffeff;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 3px;
+	margin: 0;
+}
+
+.send-mail-box {
+	background-color: #deecff;
+	border: 1px solid #7ba1ca;
+	padding: 3px;
+	position: absolute;
+	top: 40px;
+	left: 50%;
+	margin: 0 auto;
+	z-index: 900;
+	font: 10px "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+
+.send-mail-box textarea{
+	font: 10px "Lucida Grande", Lucida, Verdana, sans-serif;
+	color: #232d39;
+}
+
+.send-mail-box p{
+	margin: 2px;
+}
+
+.send-mail-box h4 {
+	margin: 0px 0px 3px;
+}
+
+
+
+.send-mail-box label {
+	color: #3e5289;
+	font-size: 10px;
+	width: 90px;
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.top-dialog {
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	margin-left: -300px;
+	z-index: 800;
+	width: 600px;
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 10px;	
+	-webkit-border-radius-bottomleft: 10px;
+	-webkit-border-radius-bottomright: 10px;
+	background-color: rgba(255,254,255,0.95);
+	box-shadow: 1px 1px 3px #666;
+	font: 10px "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+
+.top-dialog form {
+	margin: 5px;
+}
+
+.top-dialog h3{
+	background-color: #ff7100;
+	color: #fffeff;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 3px;
+	margin: 0;
+}
+
+.top-dialog label {
+	color: #2f353a;
+	font-weight: bold;
+	min-width: 80px;
+	padding: 3px 5px 3px 3px;
+	margin: 0px;
+	display: inline-table;
+	width: 100px;
+}
+
+.magazzino-form {
+	
+	padding: 5px;
+	border: 1px solid #ababab;
+	background-color: #fffeff;
+	width: 900px;
+	position: relative;
+	margin: auto;
+	margin-top: 10px;
+	font-size: 10px;
+}
+
+.magazzino-form h3 {
+	margin: 0 0 6px;
+	color: #ff5e00;
+}
+
+.magazzino-form label {
+	display: inline-block;
+	min-width: 100px;
+	text-align: right;
+	padding-right: 3px;
+}
+
+.magazzino-form input[type=text] {
+	border: 1px inset #868686;
+	padding: 4px;
+}
+
+.notification {
+	width: 900px;
+	padding: 5px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	position: relative;
+	margin: auto;
+	background-color: #e4efff;
+	border: 1px solid #778fc7;
+}
+
+.magazzino-listwrapper {
+	width: 900px;
+	position: relative;
+	margin: 10px auto auto;
+}
+
+.magazzino-listwrapper h3 {
+	margin: 0 0 6px;
+	color: #ff5e00;
+}
+
+.intable-dialog {
+	position: absolute;
+	width: 850px;
+	min-height: 100px;
+	background-color: rgba(255,254,255,0.94);
+	border: 10px solid rgba(240,240,240,0.81);
+	padding: 5px;
+	box-shadow:3px 3px 10px #999;
+}
+
+.clildrow td {
+	background-color: #e6f7f7;
+	color: #858ca4;
+	border-top: 1px solid #c6c6c6;
+}
